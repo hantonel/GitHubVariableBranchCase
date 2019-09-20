@@ -12,6 +12,7 @@ phases:
     commands: 
       - echo $CODEBUILD_GIT_BRANCH > test.txt 
       - echo $CODEBUILD_GIT_AUTHOR! >> test.txt 
+      - php --version
       - cat test.txt 
 artifacts:  
   files:  
