@@ -11,8 +11,9 @@ phases:
   build: 
     commands: 
       - echo $CODEBUILD_GIT_BRANCH > test.txt 
-      - echo $CODEBUILD_GIT_AUTHOR! >> test.txt 
-      - php --version
+      - echo $CODEBUILD_GIT_AUTHOR! >> test.txt
+      - git rev-parse --abbrev-ref HEAD >> test.txt
+      - php --version >> test.txt
       - cat test.txt 
 artifacts:  
   files:  
